@@ -1,8 +1,5 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System;
+using Newtonsoft.Json;
 
 namespace UWaterlooAPIDotNet.Models
 {
@@ -10,18 +7,18 @@ namespace UWaterlooAPIDotNet.Models
     {
         public bool Success { get; private set; }
         public Exception Error { get; private set; }
-        public Response<T> Data { get; private set; }
+        public Response<T> Result { get; private set; }
 
-        public RunResult(string data) {
+        public RunResult(Response<T> data) {
             Success = true;
             Error = null;
-            Data = JsonConvert.DeserializeObject<Response<T>>(data);
+            Result = data;
         }
 
         public RunResult(Exception error) {
             Success = false;
             Error = error;
-            Data = null;
+            Result = null;
         }
     }
 }

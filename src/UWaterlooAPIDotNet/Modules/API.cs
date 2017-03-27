@@ -1,38 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using UWaterlooAPIDotNet.Models;
+using UWaterlooAPIDotNet.Models.API;
 
 namespace UWaterlooAPIDotNet.Modules
 {
-    public class API
+    public class API : GenericModule
     {
-        private string m_apikey;
-        private HttpClient m_client;
-
-        public API(string apikey, HttpClient client) {
-            m_apikey = apikey;
-            m_client = client;
-        }
+        public API(string apikey, HttpClient client) : base(apikey, client) { }
 
         public RunResult<List<Change>> GetChangelog() {
-            try {
-                var response = m_client.GetStringAsync(Endpoints.GetEndpoint("API_CHANGELOG")).Result;
-                return new RunResult<List<Change>>(response);
-            } catch (Exception ex) {
-                return new RunResult<List<Change>>(ex);
-            }
+            return Get<List<Change>>("API_CHANGELOG");
         }
 
         public async Task<RunResult<List<Change>>> GetChangelogAsync() {
-            try {
-                var response = await m_client.GetStringAsync(Endpoints.GetEndpoint("API_CHANGELOG"));
-                return new RunResult<List<Change>>(response);
-            } catch (Exception ex) {
-                return new RunResult<List<Change>>(ex);
-            }
+            return await GetAsync<List<Change>>("API_CHANGELOG").ConfigureAwait(false);
+        }
+
+        public RunResult<List<Version>> GetVersions() {
+            return Get<List<Version>>("API_VERSIONS");
+        }
+
+        public async Task<RunResult<List<Version>>> GetVersionsAsync() {
+            return await GetAsync<List<Version>>("API_VERSIONS").ConfigureAwait(false);
         }
     }
 }

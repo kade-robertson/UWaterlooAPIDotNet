@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace UWaterlooAPIDotNet.Models
+namespace UWaterlooAPIDotNet.Models.API
 {
-    public class Changelog
+    public class Change
     {
         [JsonProperty(PropertyName = "date")]
         public DateTime Date { get; private set; }
