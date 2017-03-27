@@ -95,5 +95,24 @@ namespace UWaterlooAPIDotNet
             { "SERVER_TIME",              "/server/time" },
             { "SERVER_CODES",             "/server/codes" },
         };
+
+        /// <summary>
+        /// Return the endpoint of a specified name.
+        /// </summary>
+        /// <param name="name">The name of the endpoint.</param>
+        /// <returns>The requested endpoint.</returns>
+        public static string GetEndpoint(string name) {
+            return m_endpoints[name];
+        }
+
+        /// <summary>
+        /// Returns the endpoint of a specified name, with parameters as required.
+        /// </summary>
+        /// <param name="name">The name of the endpoint.</param>
+        /// <param name="args">The parameters to format with.</param>
+        /// <returns>The requested endpoint, formatted appropriately.</returns>
+        public static string GetEndpoint(string name, params object[] args) {
+            return string.Format(GetEndpoint(name), args);
+        }
     }
 }
