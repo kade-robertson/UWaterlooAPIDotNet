@@ -5,10 +5,13 @@ using System.Threading.Tasks;
 
 namespace UWaterlooAPIDotNet
 {
-    public class Class1
+    public class UWaterlooAPI
     {
-        public Class1()
+        private string m_apikey;
+
+        public UWaterlooAPI(string apikey)
         {
+            m_apikey = apikey;
         }
     }
 }
