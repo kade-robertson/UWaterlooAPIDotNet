@@ -99,7 +99,7 @@ namespace UWaterlooAPIDotNet
         /// <param name="name">The name of the endpoint.</param>
         /// <returns>The requested endpoint.</returns>
         public static string GetEndpoint(string name) {
-            return "/v2" + m_endpoints[name] + ".json";
+            return $"/v2{m_endpoints[name]}.json";
         }
 
         /// <summary>
