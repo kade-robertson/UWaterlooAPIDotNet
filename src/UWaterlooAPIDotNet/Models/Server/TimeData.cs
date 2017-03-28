@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using NodaTime;
 using System;
 
 namespace UWaterlooAPIDotNet.Models.Server
@@ -9,7 +10,17 @@ namespace UWaterlooAPIDotNet.Models.Server
         public long Timestamp { get; private set; }
 
         [JsonProperty(PropertyName = "datetime")]
-        public DateTime DateTime { get; private set; }
+        private string DateString { get; set; }
+
+        [JsonIgnore]
+        public ZonedDateTime DateTime {
+            get {
+                var i = new Instant();
+                var o = DateTimeOffset.Parse(DateString);
+                i += Duration.FromSeconds(Timestamp);
+                return new ZonedDateTime(i, DateTimeZone.ForOffset(Offset.FromTimeSpan(o.Offset)));
+            }
+        }
 
         [JsonProperty(PropertyName = "timezone")]
         public string TimeZone { get; private set; }
@@ -18,9 +29,11 @@ namespace UWaterlooAPIDotNet.Models.Server
         public long KeyResetTimestamp { get; private set; }
 
         [JsonIgnore]
-        public DateTime KeyResetTime {
+        public ZonedDateTime KeyResetTime {
             get {
-                return new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc).AddSeconds(KeyResetTimestamp);
+                var i = new Instant();
+                i += Duration.FromSeconds(KeyResetTimestamp);
+                return new ZonedDateTime(i, DateTime.Zone);
             }
         }
     }
