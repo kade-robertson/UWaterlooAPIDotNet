@@ -13,6 +13,7 @@ namespace UWaterlooAPIDotNet
 
         public Modules.API API { get; private set; }
         public Modules.Server Server { get; private set; }
+        public Modules.Directory Directory { get; private set; }
 
         public UWaterlooAPI(string apikey)
         {
@@ -22,6 +23,7 @@ namespace UWaterlooAPIDotNet
 
             API = new Modules.API(m_apikey, m_client);
             Server = new Modules.Server(m_apikey, m_client);
+            Directory = new Modules.Directory(m_apikey, m_client);
         }
 
         public void Dispose() {
