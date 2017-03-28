@@ -10,11 +10,11 @@ namespace UWaterlooAPIDotNet.Modules
         public Directory(string apikey, HttpClient client) : base(apikey, client) { }
 
         public RunResult<UserInfo> GetUserInfo(string userid) {
-            return Get<UserInfo>("DIRECTORY_USERINFO", $"?key={m_apikey}"), userid);
+            return Get<UserInfo>("DIRECTORY_USERINFO", m_baseparam, userid);
         }
 
         public Task<RunResult<UserInfo>> GetUserInfoAsync(string userid) {
-            return GetAsync<UserInfo>("DIRECTORY_USERINFO", $"?key={m_apikey}"), userid);
+            return GetAsync<UserInfo>("DIRECTORY_USERINFO", m_baseparam, userid);
         }
     }
 }

@@ -11,19 +11,19 @@ namespace UWaterlooAPIDotNet.Modules
         public Transit(string apikey, HttpClient client) : base(apikey, client) { }
 
         public RunResult<TransitInfo> GetGRTInfo() {
-            return Get<TransitInfo>("TRANSIT_GRT", $"?key={m_apikey}");
+            return Get<TransitInfo>("TRANSIT_GRT", m_baseparam);
         }
 
         public Task<RunResult<TransitInfo>> GetGRTInfoAsync() {
-            return GetAsync<TransitInfo>("TRANSIT_GRT", $"?key={m_apikey}");
+            return GetAsync<TransitInfo>("TRANSIT_GRT", m_baseparam);
         }
 
         public RunResult<List<StopInfo>> GetGRTStopInfo() {
-            return Get<List<StopInfo>>("TRANSIT_GRT_STOPS", $"?key={m_apikey}");
+            return Get<List<StopInfo>>("TRANSIT_GRT_STOPS", m_baseparam);
         }
 
         public Task<RunResult<List<StopInfo>>> GetGRTStopInfoAsync() {
-            return GetAsync<List<StopInfo>>("TRANSIT_GRT_STOPS", $"?key={m_apikey}");
+            return GetAsync<List<StopInfo>>("TRANSIT_GRT_STOPS", m_baseparam);
         }
     }
 }

@@ -10,10 +10,12 @@ namespace UWaterlooAPIDotNet.Modules
     {
         protected string m_apikey;
         protected HttpClient m_client;
+        protected string m_baseparam;
 
         protected GenericModule(string apikey, HttpClient client) {
             m_apikey = apikey;
             m_client = client;
+            m_baseparam = $"?key={apikey}";
         }
 
         protected RunResult<T> Get<T>(string endpoint_name, string parameters = "") {
