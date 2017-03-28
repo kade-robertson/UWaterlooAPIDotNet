@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace UWaterlooAPIDotNet.Models.Building
+namespace UWaterlooAPIDotNet.Models.Buildings
 {
     public class BuildingSection
     {
@@ -8,9 +8,9 @@ namespace UWaterlooAPIDotNet.Models.Building
         public string Name { get; private set; }
 
         [JsonProperty(PropertyName = "latitude")]
-        public decimal Latitude { get; private set; }
+        public decimal? Latitude { get; private set; }
 
         [JsonProperty(PropertyName = "longitude")]
-        public decimal Longitude { get; private set; }
+        public decimal? Longitude { get; private set; }
     }
 }

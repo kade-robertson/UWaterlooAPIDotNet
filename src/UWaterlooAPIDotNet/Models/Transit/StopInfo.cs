@@ -27,9 +27,9 @@ namespace UWaterlooAPIDotNet.Models.Transit
         public Uri URL { get; private set; }
 
         [JsonProperty(PropertyName = "longitude")]
-        public decimal Longitude { get; private set; }
+        public decimal? Longitude { get; private set; }
 
         [JsonProperty(PropertyName = "latitude")]
-        public decimal Latitude { get; private set; }
+        public decimal? Latitude { get; private set; }
     }
 }
