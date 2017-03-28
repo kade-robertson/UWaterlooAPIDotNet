@@ -1,0 +1,29 @@
+﻿using System.Collections.Generic;
+using System.Net.Http;
+using System.Threading.Tasks;
+using UWaterlooAPIDotNet.Models;
+using UWaterlooAPIDotNet.Models.Transit;
+
+namespace UWaterlooAPIDotNet.Modules
+{
+    public class Transit : GenericModule
+    {
+        public Transit(string apikey, HttpClient client) : base(apikey, client) { }
+
+        public RunResult<TransitInfo> GetGRTInfo() {
+            return Get<TransitInfo>("TRANSIT_GRT", new StringContent($"?key={m_apikey}"));
+        }
+
+        public async Task<RunResult<TransitInfo>> GetGRTInfoAsync() {
+            return await GetAsync<TransitInfo>("TRANSIT_GRT", new StringContent($"?key={m_apikey}"));
+        }
+
+        public RunResult<List<StopInfo>> GetGRTStopInfo() {
+            return Get<List<StopInfo>>("TRANSIT_GRT_STOPS", new StringContent($"?key={m_apikey}"));
+        }
+
+        public async Task<RunResult<List<StopInfo>>> GetGRTStopInfoAsync() {
+            return await GetAsync<List<StopInfo>>("TRANSIT_GRT_STOPS", new StringContent($"?key={m_apikey}"));
+        }
+    }
+}

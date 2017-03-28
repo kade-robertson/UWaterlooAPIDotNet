@@ -11,9 +11,11 @@ namespace UWaterlooAPIDotNet
         private string m_apikey;
         private HttpClient m_client;
 
+        public Modules.Parking Parking { get; private set; }
+        public Modules.Transit Transit { get; private set; }
+        public Modules.Directory Directory { get; private set; }
         public Modules.API API { get; private set; }
         public Modules.Server Server { get; private set; }
-        public Modules.Directory Directory { get; private set; }
 
         public UWaterlooAPI(string apikey)
         {
@@ -21,9 +23,11 @@ namespace UWaterlooAPIDotNet
             m_client = new HttpClient();
             m_client.BaseAddress = new Uri("https://api.uwaterloo.ca");
 
+            Parking = new Modules.Parking(m_apikey, m_client);
+            Transit = new Modules.Transit(m_apikey, m_client);
+            Directory = new Modules.Directory(m_apikey, m_client);
             API = new Modules.API(m_apikey, m_client);
             Server = new Modules.Server(m_apikey, m_client);
-            Directory = new Modules.Directory(m_apikey, m_client);
         }
 
         public void Dispose() {
