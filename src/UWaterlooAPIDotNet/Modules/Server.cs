@@ -15,7 +15,7 @@ namespace UWaterlooAPIDotNet.Modules
         }
 
         public async Task<RunResult<TimeData>> GetServerTimeAsync() {
-            return await GetAsync<TimeData>("SERVER_TIME");
+            return await GetAsync<TimeData>("SERVER_TIME").ConfigureAwait(false);
         }
 
         public RunResult<List<ServerCode>> GetServerCodes() {
@@ -23,7 +23,7 @@ namespace UWaterlooAPIDotNet.Modules
         }
 
         public async Task<RunResult<List<ServerCode>>> GetServerCodesAsync() {
-            return await GetAsync<List<ServerCode>>("SERVER_CODES");
+            return await GetAsync<List<ServerCode>>("SERVER_CODES").ConfigureAwait(false);
         }
     }
 }

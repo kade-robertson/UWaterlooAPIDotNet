@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace UWaterlooAPIDotNet.Models.Parking
+namespace UWaterlooAPIDotNet.Models
 {
-    public class BasicLot
+    public class PointOfInterest
     {
         [JsonProperty(PropertyName = "name")]
         public string Name { get; private set; }

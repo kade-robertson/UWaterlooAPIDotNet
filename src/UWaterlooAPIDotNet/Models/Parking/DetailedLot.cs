@@ -4,16 +4,10 @@ using System;
 
 namespace UWaterlooAPIDotNet.Models.Parking
 {
-    public class DetailedLot
+    public class DetailedLot : PointOfInterest
     {
         [JsonProperty(PropertyName = "lot_name")]
-        public string Name { get; private set; }
-
-        [JsonProperty(PropertyName = "latitude")]
-        public decimal Latitude { get; private set; }
-
-        [JsonProperty(PropertyName = "longitude")]
-        public decimal Longitude { get; private set; }
+        public new string Name { get; private set; }
 
         [JsonProperty(PropertyName = "capacity")]
         public int Capacity { get; private set; }

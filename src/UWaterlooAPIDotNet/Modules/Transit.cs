@@ -15,7 +15,7 @@ namespace UWaterlooAPIDotNet.Modules
         }
 
         public async Task<RunResult<TransitInfo>> GetGRTInfoAsync() {
-            return await GetAsync<TransitInfo>("TRANSIT_GRT", new StringContent($"?key={m_apikey}"));
+            return await GetAsync<TransitInfo>("TRANSIT_GRT", new StringContent($"?key={m_apikey}")).ConfigureAwait(false);
         }
 
         public RunResult<List<StopInfo>> GetGRTStopInfo() {
@@ -23,7 +23,7 @@ namespace UWaterlooAPIDotNet.Modules
         }
 
         public async Task<RunResult<List<StopInfo>>> GetGRTStopInfoAsync() {
-            return await GetAsync<List<StopInfo>>("TRANSIT_GRT_STOPS", new StringContent($"?key={m_apikey}"));
+            return await GetAsync<List<StopInfo>>("TRANSIT_GRT_STOPS", new StringContent($"?key={m_apikey}")).ConfigureAwait(false);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace UWaterlooAPIDotNet.Modules
         }
 
         public async Task<RunResult<UserInfo>> GetUserInfoAsync(string userid) {
-            return await GetAsync<UserInfo>("DIRECTORY_USERINFO", new StringContent($"?key={m_apikey}"), userid);
+            return await GetAsync<UserInfo>("DIRECTORY_USERINFO", new StringContent($"?key={m_apikey}"), userid).ConfigureAwait(false);
         }
     }
 }
