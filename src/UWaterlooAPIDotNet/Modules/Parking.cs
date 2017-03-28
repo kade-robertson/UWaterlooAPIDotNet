@@ -14,56 +14,56 @@ namespace UWaterlooAPIDotNet.Modules
             return Get<List<DetailedLot>>("PRKNG_WATPARK", new StringContent($"?key={m_apikey}"));
         }
 
-        public async Task<RunResult<List<DetailedLot>>> GetLotCapacitiesAsync() {
-            return await GetAsync<List<DetailedLot>>("PRKNG_WATPARK", new StringContent($"?key={m_apikey}")).ConfigureAwait(false);
+        public Task<RunResult<List<DetailedLot>>> GetLotCapacitiesAsync() {
+            return GetAsync<List<DetailedLot>>("PRKNG_WATPARK", new StringContent($"?key={m_apikey}"));
         }
 
         public RunResult<List<PointOfInterest>> GetMeteredLots() {
             return Get<List<PointOfInterest>>("PRKNG_METERS", new StringContent($"?key={m_apikey}"));
         }
 
-        public async Task<RunResult<List<PointOfInterest>>> GetMeteredLotsAsync() {
-            return await GetAsync<List<PointOfInterest>>("PRKNG_METERS", new StringContent($"?key={m_apikey}")).ConfigureAwait(false);
+        public Task<RunResult<List<PointOfInterest>>> GetMeteredLotsAsync() {
+            return GetAsync<List<PointOfInterest>>("PRKNG_METERS", new StringContent($"?key={m_apikey}"));
         }
 
         public RunResult<List<PointOfInterest>> GetPermitLots() {
             return Get<List<PointOfInterest>>("PRKNG_PERMITS", new StringContent($"?key={m_apikey}"));
         }
 
-        public async Task<RunResult<List<PointOfInterest>>> GetPermitLotsAsync() {
-            return await GetAsync<List<PointOfInterest>>("PRKNG_PERMITS", new StringContent($"?key={m_apikey}")).ConfigureAwait(false);
+        public Task<RunResult<List<PointOfInterest>>> GetPermitLotsAsync() {
+            return GetAsync<List<PointOfInterest>>("PRKNG_PERMITS", new StringContent($"?key={m_apikey}"));
         }
 
         public RunResult<List<PointOfInterest>> GetVisitorLots() {
             return Get<List<PointOfInterest>>("PRKNG_VISITORS", new StringContent($"?key={m_apikey}"));
         }
 
-        public async Task<RunResult<List<PointOfInterest>>> GetVisitorLotsAsync() {
-            return await GetAsync<List<PointOfInterest>>("PRKNG_VISITORS", new StringContent($"?key={m_apikey}")).ConfigureAwait(false);
+        public Task<RunResult<List<PointOfInterest>>> GetVisitorLotsAsync() {
+            return GetAsync<List<PointOfInterest>>("PRKNG_VISITORS", new StringContent($"?key={m_apikey}"));
         }
 
         public RunResult<List<ShortTermLot>> GetShortTermLots() {
             return Get<List<ShortTermLot>>("PRKNG_SHORTTERM", new StringContent($"?key={m_apikey}"));
         }
 
-        public async Task<RunResult<List<ShortTermLot>>> GetShortTermLotsAsync() {
-            return await GetAsync<List<ShortTermLot>>("PRKNG_SHORTTERM", new StringContent($"?key={m_apikey}")).ConfigureAwait(false);
+        public Task<RunResult<List<ShortTermLot>>> GetShortTermLotsAsync() {
+            return GetAsync<List<ShortTermLot>>("PRKNG_SHORTTERM", new StringContent($"?key={m_apikey}"));
         }
 
         public RunResult<List<PointOfInterest>> GetAccessibleLots() {
             return Get<List<PointOfInterest>>("PRKNG_ACCESSIBLE", new StringContent($"?key={m_apikey}"));
         }
 
-        public async Task<RunResult<List<PointOfInterest>>> GetAccessibleLotsAsync() {
-            return await GetAsync<List<PointOfInterest>>("PRKNG_ACCESSIBLE", new StringContent($"?key={m_apikey}")).ConfigureAwait(false);
+        public Task<RunResult<List<PointOfInterest>>> GetAccessibleLotsAsync() {
+            return GetAsync<List<PointOfInterest>>("PRKNG_ACCESSIBLE", new StringContent($"?key={m_apikey}"));
         }
 
         public RunResult<List<PointOfInterest>> GetMotorcycleLots() {
             return Get<List<PointOfInterest>>("PRKNG_MOTORCYCLE", new StringContent($"?key={m_apikey}"));
         }
 
-        public async Task<RunResult<List<PointOfInterest>>> GetMotorcycleLotsAsync() {
-            return await GetAsync<List<PointOfInterest>>("PRKNG_MOTORCYCLE", new StringContent($"?key={m_apikey}")).ConfigureAwait(false);
+        public Task<RunResult<List<PointOfInterest>>> GetMotorcycleLotsAsync() {
+            return GetAsync<List<PointOfInterest>>("PRKNG_MOTORCYCLE", new StringContent($"?key={m_apikey}"));
         }
     }
 }

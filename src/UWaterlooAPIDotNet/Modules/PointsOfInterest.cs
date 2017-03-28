@@ -13,8 +13,8 @@ namespace UWaterlooAPIDotNet.Modules
             return Get<List<PointOfInterest>>("POI_ATMS", new StringContent($"?key={m_apikey}"));
         }
 
-        public async Task<RunResult<List<PointOfInterest>>> GetATMsAsync() {
-            return await GetAsync<List<PointOfInterest>>("POI_ATMS", new StringContent($"?key={m_apikey}")).ConfigureAwait(false);
+        public Task<RunResult<List<PointOfInterest>>> GetATMsAsync() {
+            return GetAsync<List<PointOfInterest>>("POI_ATMS", new StringContent($"?key={m_apikey}"));
         }
     }
 }

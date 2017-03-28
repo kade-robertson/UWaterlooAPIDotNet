@@ -14,16 +14,16 @@ namespace UWaterlooAPIDotNet.Modules
             return Get<TimeData>("SERVER_TIME");
         }
 
-        public async Task<RunResult<TimeData>> GetServerTimeAsync() {
-            return await GetAsync<TimeData>("SERVER_TIME").ConfigureAwait(false);
+        public Task<RunResult<TimeData>> GetServerTimeAsync() {
+            return GetAsync<TimeData>("SERVER_TIME");
         }
 
         public RunResult<List<ServerCode>> GetServerCodes() {
             return Get<List<ServerCode>>("SERVER_CODES");
         }
 
-        public async Task<RunResult<List<ServerCode>>> GetServerCodesAsync() {
-            return await GetAsync<List<ServerCode>>("SERVER_CODES").ConfigureAwait(false);
+        public Task<RunResult<List<ServerCode>>> GetServerCodesAsync() {
+            return GetAsync<List<ServerCode>>("SERVER_CODES");
         }
     }
 }

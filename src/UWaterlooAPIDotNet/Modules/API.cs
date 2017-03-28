@@ -14,40 +14,40 @@ namespace UWaterlooAPIDotNet.Modules
             return Get<List<Change>>("API_CHANGELOG");
         }
 
-        public async Task<RunResult<List<Change>>> GetChangelogAsync() {
-            return await GetAsync<List<Change>>("API_CHANGELOG").ConfigureAwait(false);
+        public Task<RunResult<List<Change>>> GetChangelogAsync() {
+            return GetAsync<List<Change>>("API_CHANGELOG");
         }
 
         public RunResult<List<Version>> GetVersions() {
             return Get<List<Version>>("API_VERSIONS");
         }
 
-        public async Task<RunResult<List<Version>>> GetVersionsAsync() {
-            return await GetAsync<List<Version>>("API_VERSIONS").ConfigureAwait(false);
+        public Task<RunResult<List<Version>>> GetVersionsAsync() {
+            return GetAsync<List<Version>>("API_VERSIONS");
         }
 
         public RunResult<List<Method>> GetMethods() {
             return Get<List<Method>>("API_METHODS");
         }
 
-        public async Task<RunResult<List<Method>>> GetMethodsAsync() {
-            return await GetAsync<List<Method>>("API_METHODS").ConfigureAwait(false);
+        public Task<RunResult<List<Method>>> GetMethodsAsync() {
+            return GetAsync<List<Method>>("API_METHODS");
         }
 
         public RunResult<List<Service>> GetServices() {
             return Get<List<Service>>("API_SERVICES");
         }
 
-        public async Task<RunResult<List<Service>>> GetServicesAsync() {
-            return await GetAsync<List<Service>>("API_SERVICES").ConfigureAwait(false);
+        public Task<RunResult<List<Service>>> GetServicesAsync() {
+            return GetAsync<List<Service>>("API_SERVICES");
         }
 
         public RunResult<Usage> GetUsage() {
             return Get<Usage>("API_USAGE", new StringContent($"?key={m_apikey}"));
         }
 
-        public async Task<RunResult<Usage>> GetUsageAsync() {
-            return await GetAsync<Usage>("API_USAGE", new StringContent($"?key={m_apikey}")).ConfigureAwait(false);
+        public Task<RunResult<Usage>> GetUsageAsync() {
+            return GetAsync<Usage>("API_USAGE", new StringContent($"?key={m_apikey}"));
         }
     }
 }
