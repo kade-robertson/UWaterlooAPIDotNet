@@ -65,15 +65,15 @@ namespace UWaterlooAPIDotNet
             { "BLDNG_COURSES_BYSPEC",     "/buildings/{0}/{1}/courses" },              // Not Implemented
             { "BLDNG_ACCESSPT_BYCODE",    "/buildings/{0}/accesspoints" },             // Not Implemented
             { "BLDNG_VENDING_BYCODE",     "/buildings/{0}/vendingmachines" },          // Not Implemented
-            { "POI_ATMS",                 "/poi/atms" },                               // Not Implemented
-            { "POI_GREYHOUND",            "/poi/greyhound" },                          // Not Implemented
-            { "POI_HELPLINES",            "/poi/helplines" },                          // Not Implemented
-            { "POI_LIBRARIES",            "/poi/libraries" },                          // Not Implemented
-            { "POI_PHOTOSPHERES",         "/poi/photospheres" },                       // Not Implemented
-            { "POI_DEFIBRILLATORS",       "/poi/defibrillators" },                     // Not Implemented
-            { "POI_CONSTRUCTION",         "/poi/constructionsites" },                  // Not Implemented
-            { "POI_ACCESSIBLE_ENT",       "/poi/accessibleentrances" },                // Not Implemented
-            { "POI_VISITORINFO",          "/poi/visitorinformation" },                 // Not Implemented
+            { "POI_ATMS",                 "/poi/atms" },                               // Implemented
+            { "POI_GREYHOUND",            "/poi/greyhound" },                          // Implemented
+            { "POI_HELPLINES",            "/poi/helplines" },                          // Implemented
+            { "POI_LIBRARIES",            "/poi/libraries" },                          // Implemented
+            { "POI_PHOTOSPHERES",         "/poi/photospheres" },                       // Implemented
+            { "POI_DEFIBRILLATORS",       "/poi/defibrillators" },                     // Implemented
+            { "POI_CONSTRUCTION",         "/poi/constructionsites" },                  // Implemented
+            { "POI_ACCESSIBLE_ENT",       "/poi/accessibleentrances" },                // Implemented
+            { "POI_VISITORINFO",          "/poi/visitorinformation" },                 // Implemented
             { "PRKNG_WATPARK",            "/parking/watpark" },                        // Implemented
             { "PRKNG_METERS",             "/parking/lots/meter" },                     // Implemented
             { "PRKNG_PERMITS",            "/parking/lots/permit" },                    // Implemented
