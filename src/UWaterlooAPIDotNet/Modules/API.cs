@@ -43,11 +43,11 @@ namespace UWaterlooAPIDotNet.Modules
         }
 
         public RunResult<Usage> GetUsage() {
-            return Get<Usage>("API_USAGE", new StringContent($"?key={m_apikey}"));
+            return Get<Usage>("API_USAGE", $"?key={m_apikey}");
         }
 
         public Task<RunResult<Usage>> GetUsageAsync() {
-            return GetAsync<Usage>("API_USAGE", new StringContent($"?key={m_apikey}"));
+            return GetAsync<Usage>("API_USAGE", $"?key={m_apikey}");
         }
     }
 }

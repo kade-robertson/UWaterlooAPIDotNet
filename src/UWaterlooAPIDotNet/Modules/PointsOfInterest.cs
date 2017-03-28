@@ -10,11 +10,19 @@ namespace UWaterlooAPIDotNet.Modules
         public PointsOfInterest(string apikey, HttpClient client) : base(apikey, client) { }
 
         public RunResult<List<PointOfInterest>> GetATMs() {
-            return Get<List<PointOfInterest>>("POI_ATMS", new StringContent($"?key={m_apikey}"));
+            return Get<List<PointOfInterest>>("POI_ATMS", $"?key={m_apikey}");
         }
 
         public Task<RunResult<List<PointOfInterest>>> GetATMsAsync() {
-            return GetAsync<List<PointOfInterest>>("POI_ATMS", new StringContent($"?key={m_apikey}"));
+            return GetAsync<List<PointOfInterest>>("POI_ATMS", $"?key={m_apikey}");
+        }
+
+        public RunResult<List<PointOfInterest>> GetGreyhoundStops() {
+            return Get<List<PointOfInterest>>("POI_GREYHOUND", $"?key={m_apikey}");
+        }
+
+        public Task<RunResult<List<PointOfInterest>>> GetGreyhoundStopsAsync() {
+            return GetAsync<List<PointOfInterest>>("POI_GREYHOUND", $"?key={m_apikey}");
         }
     }
 }

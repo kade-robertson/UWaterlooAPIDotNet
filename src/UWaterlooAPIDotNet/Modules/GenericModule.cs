@@ -16,9 +16,9 @@ namespace UWaterlooAPIDotNet.Modules
             m_client = client;
         }
 
-        protected RunResult<T> Get<T>(string endpoint_name, HttpContent parameters = null) {
+        protected RunResult<T> Get<T>(string endpoint_name, string parameters = "") {
             try { 
-                var message = new HttpRequestMessage(HttpMethod.Get, Endpoints.GetEndpoint(endpoint_name) + parameters?.ReadAsStringAsync().Result);
+                var message = new HttpRequestMessage(HttpMethod.Get, Endpoints.GetEndpoint(endpoint_name) + parameters);
                 var result = m_client.SendAsync(message).Result;
                 var data = JsonConvert.DeserializeObject<Response<T>>(result.Content.ReadAsStringAsync().Result);
                 return new RunResult<T>(data);
@@ -27,9 +27,9 @@ namespace UWaterlooAPIDotNet.Modules
             }
         }
 
-        protected RunResult<T> Get<T>(string endpoint_name, HttpContent parameters = null, params object[] args) {
+        protected RunResult<T> Get<T>(string endpoint_name, string parameters = "", params object[] args) {
             try {
-                var message = new HttpRequestMessage(HttpMethod.Get, Endpoints.GetEndpoint(endpoint_name, args) + parameters?.ReadAsStringAsync().Result);
+                var message = new HttpRequestMessage(HttpMethod.Get, Endpoints.GetEndpoint(endpoint_name, args) + parameters);
                 var result = m_client.SendAsync(message).Result;
                 var data = JsonConvert.DeserializeObject<Response<T>>(result.Content.ReadAsStringAsync().Result);
                 return new RunResult<T>(data);
@@ -38,9 +38,9 @@ namespace UWaterlooAPIDotNet.Modules
             }
         }
 
-        protected async Task<RunResult<T>> GetAsync<T>(string endpoint_name, HttpContent parameters = null) {
+        protected async Task<RunResult<T>> GetAsync<T>(string endpoint_name, string parameters = "") {
             try {
-                var message = new HttpRequestMessage(HttpMethod.Get, Endpoints.GetEndpoint(endpoint_name) + (await parameters?.ReadAsStringAsync()));
+                var message = new HttpRequestMessage(HttpMethod.Get, Endpoints.GetEndpoint(endpoint_name) + parameters);
                 var result = await m_client.SendAsync(message).ConfigureAwait(false);
                 var data = JsonConvert.DeserializeObject<Response<T>>(await result.Content.ReadAsStringAsync().ConfigureAwait(false));
                 return new RunResult<T>(data);
@@ -49,9 +49,9 @@ namespace UWaterlooAPIDotNet.Modules
             }
         }
 
-        protected async Task<RunResult<T>> GetAsync<T>(string endpoint_name, HttpContent parameters = null, params object[] args) {
+        protected async Task<RunResult<T>> GetAsync<T>(string endpoint_name, string parameters = "", params object[] args) {
             try {
-                var message = new HttpRequestMessage(HttpMethod.Get, Endpoints.GetEndpoint(endpoint_name, args) + (await parameters?.ReadAsStringAsync()));
+                var message = new HttpRequestMessage(HttpMethod.Get, Endpoints.GetEndpoint(endpoint_name, args) + parameters);
                 var result = await m_client.SendAsync(message).ConfigureAwait(false);
                 var data = JsonConvert.DeserializeObject<Response<T>>(await result.Content.ReadAsStringAsync().ConfigureAwait(false));
                 return new RunResult<T>(data);
