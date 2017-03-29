@@ -51,10 +51,10 @@ namespace UWaterlooAPIDotNet
             { "TERM_ENROLLMENT_BYTERM",   "/terms/{0}/enrollment" },                   // Not Implemented
             { "TERM_ENROLLMENT_BYSPEC",   "/terms/{0}/{1}/enrollment" },               // Not Implemented
             { "TERM_INFOSESS_BYTERM",     "/terms/{0}/infosessions" },                 // Not Implemented
-            { "RS_TUTORS",                "/resources/tutors" },                       // Not Implemented
-            { "RS_INFOSESSIONS",          "/resources/infosessions" },                 // Not Implemented
-            { "RS_GOOSEWATCH",            "/resources/goosewatch" },                   // Not Implemented
-            { "RS_SUNSHINELIST",          "/resources/sunshinelist" },                 // Not Implemented
+            { "RS_TUTORS",                "/resources/tutors" },
+            { "RS_INFOSESSIONS",          "/resources/infosessions" },
+            { "RS_GOOSEWATCH",            "/resources/goosewatch" },
+            { "RS_SUNSHINELIST",          "/resources/sunshinelist" },
             { "CODES_UNITS",              "/codes/units" },
             { "CODES_TERMS",              "/codes/terms" },
             { "CODES_GROUPS",             "/codes/groups" },
