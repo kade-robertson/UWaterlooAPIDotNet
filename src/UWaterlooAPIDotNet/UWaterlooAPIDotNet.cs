@@ -11,13 +11,14 @@ namespace UWaterlooAPIDotNet
         private string m_apikey;
         private HttpClient m_client;
 
-        public Modules.Buildings Buildings { get; private set; }
-        public Modules.PointsOfInterest PointsOfInterest { get; private set; }
-        public Modules.Parking Parking { get; private set; }
-        public Modules.Transit Transit { get; private set; }
-        public Modules.Directory Directory { get; private set; }
-        public Modules.API API { get; private set; }
-        public Modules.Server Server { get; private set; }
+        public Modules.Codes Codes { get; }
+        public Modules.Buildings Buildings { get; }
+        public Modules.PointsOfInterest PointsOfInterest { get; }
+        public Modules.Parking Parking { get; }
+        public Modules.Transit Transit { get; }
+        public Modules.Directory Directory { get; }
+        public Modules.API API { get; }
+        public Modules.Server Server { get; }
 
         public UWaterlooAPI(string apikey)
         {
@@ -25,6 +26,7 @@ namespace UWaterlooAPIDotNet
             m_client = new HttpClient();
             m_client.BaseAddress = new Uri("https://api.uwaterloo.ca");
 
+            Codes = new Modules.Codes(m_apikey, m_client);
             Buildings = new Modules.Buildings(m_apikey, m_client);
             PointsOfInterest = new Modules.PointsOfInterest(m_apikey, m_client);
             Parking = new Modules.Parking(m_apikey, m_client);

@@ -55,42 +55,42 @@ namespace UWaterlooAPIDotNet
             { "RS_INFOSESSIONS",          "/resources/infosessions" },                 // Not Implemented
             { "RS_GOOSEWATCH",            "/resources/goosewatch" },                   // Not Implemented
             { "RS_SUNSHINELIST",          "/resources/sunshinelist" },                 // Not Implemented
-            { "CODES_UNITS",              "/codes/units" },                            // Not Implemented
-            { "CODES_TERMS",              "/codes/terms" },                            // Not Implemented
-            { "CODES_GROUPS",             "/codes/groups" },                           // Not Implemented
-            { "CODES_SUBJECTS",           "/codes/subjects" },                         // Not Implemented
-            { "CODES_INSTRUCTIONS",       "/codes/instructions" },                     // Not Implemented
-            { "BLDNG_LIST",               "/buildings/list" },                         // Not Implemented
-            { "BLDNG_BYCODE",             "/buildings/{0}" },                          // Not Implemented
-            { "BLDNG_COURSES_BYSPEC",     "/buildings/{0}/{1}/courses" },              // Not Implemented
-            { "BLDNG_ACCESSPT_BYCODE",    "/buildings/{0}/accesspoints" },             // Not Implemented
-            { "BLDNG_VENDING_BYCODE",     "/buildings/{0}/vendingmachines" },          // Not Implemented
-            { "POI_ATMS",                 "/poi/atms" },                               // Implemented
-            { "POI_GREYHOUND",            "/poi/greyhound" },                          // Implemented
-            { "POI_HELPLINES",            "/poi/helplines" },                          // Implemented
-            { "POI_LIBRARIES",            "/poi/libraries" },                          // Implemented
-            { "POI_PHOTOSPHERES",         "/poi/photospheres" },                       // Implemented
-            { "POI_DEFIBRILLATORS",       "/poi/defibrillators" },                     // Implemented
-            { "POI_CONSTRUCTION",         "/poi/constructionsites" },                  // Implemented
-            { "POI_ACCESSIBLE_ENT",       "/poi/accessibleentrances" },                // Implemented
-            { "POI_VISITORINFO",          "/poi/visitorinformation" },                 // Implemented
-            { "PRKNG_WATPARK",            "/parking/watpark" },                        // Implemented
-            { "PRKNG_METERS",             "/parking/lots/meter" },                     // Implemented
-            { "PRKNG_PERMITS",            "/parking/lots/permit" },                    // Implemented
-            { "PRKNG_VISITORS",           "/parking/lots/visitor" },                   // Implemented
-            { "PRKNG_SHORTTERM",          "/parking/lots/shortterm" },                 // Implemented
-            { "PRKNG_ACCESSIBLE",         "/parking/lots/accessible" },                // Implemented
-            { "PRKNG_MOTORCYCLE",         "/parking/lots/motorcycle" },                // Implemented
-            { "TRANSIT_GRT",              "/transit/grt" },                            // Implemented
-            { "TRANSIT_GRT_STOPS",        "/transit/grt/stops" },                      // Implemented
-            { "DIRECTORY_USERINFO",       "/directory/{0}" },                          // Implemented
-            { "API_USAGE",                "/api/usage" },                              // Implemented
-            { "API_SERVICES",             "/api/services" },                           // Implemented
-            { "API_METHODS",              "/api/methods" },                            // Implemented
-            { "API_VERSIONS",             "/api/versions" },                           // Implemented
-            { "API_CHANGELOG",            "/api/changelog" },                          // Implemented
-            { "SERVER_TIME",              "/server/time" },                            // Implemented
-            { "SERVER_CODES",             "/server/codes" },                           // Implemented
+            { "CODES_UNITS",              "/codes/units" },
+            { "CODES_TERMS",              "/codes/terms" },
+            { "CODES_GROUPS",             "/codes/groups" },
+            { "CODES_SUBJECTS",           "/codes/subjects" },
+            { "CODES_INSTRUCTIONS",       "/codes/instructions" },
+            { "BLDNG_LIST",               "/buildings/list" },
+            { "BLDNG_BYCODE",             "/buildings/{0}" },
+            { "BLDNG_COURSES_BYSPEC",     "/buildings/{0}/{1}/courses" },
+            { "BLDNG_ACCESSPT_BYCODE",    "/buildings/{0}/accesspoints" },
+            { "BLDNG_VENDING_BYCODE",     "/buildings/{0}/vendingmachines" },
+            { "POI_ATMS",                 "/poi/atms" },
+            { "POI_GREYHOUND",            "/poi/greyhound" },
+            { "POI_HELPLINES",            "/poi/helplines" },
+            { "POI_LIBRARIES",            "/poi/libraries" },
+            { "POI_PHOTOSPHERES",         "/poi/photospheres" },
+            { "POI_DEFIBRILLATORS",       "/poi/defibrillators" },
+            { "POI_CONSTRUCTION",         "/poi/constructionsites" },
+            { "POI_ACCESSIBLE_ENT",       "/poi/accessibleentrances" },
+            { "POI_VISITORINFO",          "/poi/visitorinformation" },
+            { "PRKNG_WATPARK",            "/parking/watpark" },
+            { "PRKNG_METERS",             "/parking/lots/meter" },
+            { "PRKNG_PERMITS",            "/parking/lots/permit" },
+            { "PRKNG_VISITORS",           "/parking/lots/visitor" },
+            { "PRKNG_SHORTTERM",          "/parking/lots/shortterm" },
+            { "PRKNG_ACCESSIBLE",         "/parking/lots/accessible" },
+            { "PRKNG_MOTORCYCLE",         "/parking/lots/motorcycle" },
+            { "TRANSIT_GRT",              "/transit/grt" },
+            { "TRANSIT_GRT_STOPS",        "/transit/grt/stops" },
+            { "DIRECTORY_USERINFO",       "/directory/{0}" },
+            { "API_USAGE",                "/api/usage" },
+            { "API_SERVICES",             "/api/services" },
+            { "API_METHODS",              "/api/methods" },
+            { "API_VERSIONS",             "/api/versions" },
+            { "API_CHANGELOG",            "/api/changelog" },
+            { "SERVER_TIME",              "/server/time" },
+            { "SERVER_CODES",             "/server/codes" },
         };
 
         /// <summary>
