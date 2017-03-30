@@ -11,6 +11,7 @@ namespace UWaterlooAPIDotNet
         private string m_apikey;
         private HttpClient m_client;
 
+        public Modules.Weather Weather { get; }
         public Modules.Terms Terms { get; }
         public Modules.Resources Resources { get; }
         public Modules.Codes Codes { get; }
@@ -28,6 +29,7 @@ namespace UWaterlooAPIDotNet
             m_client = new HttpClient();
             m_client.BaseAddress = new Uri("https://api.uwaterloo.ca");
 
+            Weather = new Modules.Weather(m_apikey, m_client);
             Terms = new Modules.Terms(m_apikey, m_client);
             Resources = new Modules.Resources(m_apikey, m_client);
             Codes = new Modules.Codes(m_apikey, m_client);

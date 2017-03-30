@@ -42,7 +42,7 @@ namespace UWaterlooAPIDotNet
             { "OPPORTUNITIES_BYSITE",     "/opportunities/{0}" },                      // Not Implemented
             { "OPPORTUNITIES_BYSPEC",     "/opportunities/{0}/{1}" },                  // Not Implemented
             { "SERVICES_BYSITE",          "/services/{0}" },                           // Not Implemented
-            { "WEATHER_CURRENT",          "/weather/current" },                        // Not Implemented
+            { "WEATHER_CURRENT",          "/weather/current" },
             { "TERMS_LIST",               "/terms/list" },
             { "TERM_COURSES_BYTERM",      "/terms/{0}/courses" },
             { "TERM_EXSCHED_BYTERM",      "/terms/{0}/examschedule" },
