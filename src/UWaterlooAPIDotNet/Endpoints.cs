@@ -43,14 +43,14 @@ namespace UWaterlooAPIDotNet
             { "OPPORTUNITIES_BYSPEC",     "/opportunities/{0}/{1}" },                  // Not Implemented
             { "SERVICES_BYSITE",          "/services/{0}" },                           // Not Implemented
             { "WEATHER_CURRENT",          "/weather/current" },                        // Not Implemented
-            { "TERMS_LIST",               "/terms/list" },                             // Not Implemented
-            { "TERM_COURSES_BYTERM",      "/terms/{0}/courses" },                      // Not Implemented
-            { "TERM_EXSCHED_BYTERM",      "/terms/{0}/examschedule" },                 // Not Implemented
-            { "TERM_SCHEDULE_ALL_BYSPEC", "/terms/{0}/{1}/schedule" },                 // Not Implemented
-            { "TERM_SCHEDULE_CN_BYSPEC",  "/terms/{0}/{1}/{2}/schedule" },             // Not Implemented
-            { "TERM_ENROLLMENT_BYTERM",   "/terms/{0}/enrollment" },                   // Not Implemented
-            { "TERM_ENROLLMENT_BYSPEC",   "/terms/{0}/{1}/enrollment" },               // Not Implemented
-            { "TERM_INFOSESS_BYTERM",     "/terms/{0}/infosessions" },                 // Not Implemented
+            { "TERMS_LIST",               "/terms/list" },
+            { "TERM_COURSES_BYTERM",      "/terms/{0}/courses" },
+            { "TERM_EXSCHED_BYTERM",      "/terms/{0}/examschedule" },
+            { "TERM_SCHEDULE_ALL_BYSPEC", "/terms/{0}/{1}/schedule" },
+            { "TERM_SCHEDULE_CN_BYSPEC",  "/terms/{0}/{1}/{2}/schedule" },
+            { "TERM_ENROLLMENT_BYTERM",   "/terms/{0}/enrollment" },
+            { "TERM_ENROLLMENT_BYSPEC",   "/terms/{0}/{1}/enrollment" },
+            { "TERM_INFOSESS_BYTERM",     "/terms/{0}/infosessions" },
             { "RS_TUTORS",                "/resources/tutors" },
             { "RS_INFOSESSIONS",          "/resources/infosessions" },
             { "RS_GOOSEWATCH",            "/resources/goosewatch" },

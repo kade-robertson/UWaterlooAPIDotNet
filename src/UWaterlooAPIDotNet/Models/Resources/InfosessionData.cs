@@ -19,8 +19,7 @@ namespace UWaterlooAPIDotNet.Models.Resources
         private string DateString { get; set; }
 
         [JsonProperty(PropertyName = "day")]
-        [JsonConverter(typeof(StringEnumConverter))]
-        public DayOfWeek DayOfWeek { get; private set; }
+        public string DayOfWeek { get; private set; }
 
         [JsonProperty(PropertyName = "start_time")]
         private string StartTimeString { get; set; }
