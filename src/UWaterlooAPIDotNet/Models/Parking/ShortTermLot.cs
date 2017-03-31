@@ -7,7 +7,7 @@ namespace UWaterlooAPIDotNet.Models.Parking
     {
         [JsonProperty(PropertyName = "capacity")]
         [JsonConverter(typeof(StringIntConverter))]
-        public int Capacity { get; private set; }
+        public int? Capacity { get; private set; }
 
         [JsonProperty(PropertyName = "maxstay")]
         public string MaxStay { get; private set; }

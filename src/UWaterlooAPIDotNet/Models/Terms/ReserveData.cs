@@ -8,9 +8,9 @@ namespace UWaterlooAPIDotNet.Models.Terms
         public string Group { get; private set; }
 
         [JsonProperty(PropertyName = "enrollment_capacity")]
-        public int EnrollmentCapacity { get; private set; }
+        public int? EnrollmentCapacity { get; private set; }
 
         [JsonProperty(PropertyName = "enrollment_total")]
-        public int EnrollmentTotal { get; private set; }
+        public int? EnrollmentTotal { get; private set; }
     }
 }

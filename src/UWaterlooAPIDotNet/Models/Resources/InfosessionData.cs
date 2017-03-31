@@ -10,7 +10,7 @@ namespace UWaterlooAPIDotNet.Models.Resources
     public class InfosessionData
     {
         [JsonProperty(PropertyName = "id")]
-        public int ID { get; private set; }
+        public int? ID { get; private set; }
 
         [JsonProperty(PropertyName = "employer")]
         public string Employer { get; private set; }
@@ -28,14 +28,14 @@ namespace UWaterlooAPIDotNet.Models.Resources
         private string EndTimeString { get; set; }
 
         [JsonIgnore]
-        public DateTime StartTime {
+        public DateTime? StartTime {
             get {
                 return DateTime.ParseExact(DateString + " " + StartTimeString, @"yyyy-MM-dd HH\:mm", null);
             }
         }
 
         [JsonIgnore]
-        public DateTime EndTime {
+        public DateTime? EndTime {
             get {
                 return DateTime.ParseExact(DateString + " " + EndTimeString, @"yyyy-MM-dd HH\:mm", null);
             }

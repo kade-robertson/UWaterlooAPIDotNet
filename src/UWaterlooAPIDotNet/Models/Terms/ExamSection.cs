@@ -21,14 +21,14 @@ namespace UWaterlooAPIDotNet.Models.Terms
         private string EndTimeString { get; set; }
 
         [JsonIgnore]
-        public DateTime StartTime {
+        public DateTime? StartTime {
             get {
                 return DateTime.ParseExact(DateString + " " + StartTimeString, @"yyyy-MM-dd h\:mm tt", null);
             }
         }
 
         [JsonIgnore]
-        public DateTime EndTime {
+        public DateTime? EndTime {
             get {
                 return DateTime.ParseExact(DateString + " " + EndTimeString, @"yyyy-MM-dd h\:mm tt", null);
             }

@@ -20,7 +20,7 @@ namespace UWaterlooAPIDotNet.Models.Terms
         public string Campus { get; private set; }
 
         [JsonProperty(PropertyName = "associated_class")]
-        public int AssociatedClass { get; private set; }
+        public int? AssociatedClass { get; private set; }
 
         [JsonProperty(PropertyName = "related_component_1")]
         public string RelatedComponent { get; private set; }
@@ -41,7 +41,7 @@ namespace UWaterlooAPIDotNet.Models.Terms
         public List<string> HeldWith { get; private set; }
 
         [JsonProperty(PropertyName = "term")]
-        public int Term { get; private set; }
+        public int? Term { get; private set; }
 
         [JsonProperty(PropertyName = "academic_level")]
         public string AcademicLevel { get; private set; }

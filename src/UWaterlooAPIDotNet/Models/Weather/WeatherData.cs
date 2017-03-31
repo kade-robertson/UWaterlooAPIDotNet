@@ -60,33 +60,8 @@ namespace UWaterlooAPIDotNet.Models.Weather
         [JsonProperty(PropertyName = "wind_speed_kph")]
         public decimal? WindSpeed { get; private set; }
 
-        [JsonProperty(PropertyName = "wind_direction_degrees")]
-        public decimal? WindDirectionDegrees { get; private set; }
-
-        [JsonIgnore]
-        public string WindDirection {
-            get {
-                var w = WindDirectionDegrees % 360;
-                var f = (decimal)11.25;
-                if (w == null) return "N/A";
-                if (w < f     || w > 31*f) return "N";
-                if (w >= f    && w < 3*f)  return "NNE";
-                if (w >= 3*f  && w < 5*f)  return "NE";
-                if (w >= 5*f  && w < 7*f)  return "ENE";
-                if (w >= 7*f  && w < 9*f)  return "E";
-                if (w >= 9*f  && w < 11*f) return "ESE";
-                if (w >= 11*f && w < 13*f) return "SE";
-                if (w >= 13*f && w < 15*f) return "SSE";
-                if (w >= 15*f && w < 17*f) return "S";
-                if (w >= 17*f && w < 19*f) return "SSW";
-                if (w >= 19*f && w < 21*f) return "SW";
-                if (w >= 21*f && w < 23*f) return "WSW";
-                if (w >= 23*f && w < 25*f) return "W";
-                if (w >= 25*f && w < 27*f) return "WNW";
-                if (w >= 27*f && w < 29*f) return "NW";
-                if (w >= 29*f && w < 31*f) return "NNW";
-            }
-        }
+        [JsonProperty(PropertyName = "wind_direction")]
+        public string WindDirection { get; private set; }
 
         [JsonProperty(PropertyName = "pressure_kpa")]
         public decimal? Pressure { get; private set; }

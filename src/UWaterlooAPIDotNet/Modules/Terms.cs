@@ -15,7 +15,7 @@ namespace UWaterlooAPIDotNet.Modules
             if (term == 0) {
                 var d = GetTermData();
                 if (d.Success) {
-                    return d.Result.Data.CurrentTerm;
+                    return (int)d.Result.Data.CurrentTerm;
                 } else {
                     return -1;
                 }
@@ -28,7 +28,7 @@ namespace UWaterlooAPIDotNet.Modules
             if (term == 0) {
                 var d = await GetTermDataAsync();
                 if (d.Success) {
-                    return d.Result.Data.CurrentTerm;
+                    return (int)d.Result.Data.CurrentTerm;
                 } else {
                     return -1;
                 }

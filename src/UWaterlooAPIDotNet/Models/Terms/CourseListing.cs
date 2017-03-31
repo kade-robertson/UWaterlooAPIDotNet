@@ -11,7 +11,7 @@ namespace UWaterlooAPIDotNet.Models.Terms
         public string CatalogNumber { get; private set; }
 
         [JsonProperty(PropertyName = "units")]
-        public decimal Units { get; private set; }
+        public decimal? Units { get; private set; }
 
         [JsonProperty(PropertyName = "title")]
         public string Title { get; private set; }

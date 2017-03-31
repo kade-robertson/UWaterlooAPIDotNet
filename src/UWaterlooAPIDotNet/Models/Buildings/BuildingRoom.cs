@@ -8,7 +8,7 @@ namespace UWaterlooAPIDotNet.Models.Buildings
     public class BuildingRoom
     {
         [JsonProperty(PropertyName = "class_number")]
-        public int ClassNumber { get; private set; }
+        public int? ClassNumber { get; private set; }
 
         [JsonProperty(PropertyName = "subject")]
         public string SubjectCode { get; private set; }
@@ -38,7 +38,7 @@ namespace UWaterlooAPIDotNet.Models.Buildings
         public DateTime? EndDate { get; private set; }
 
         [JsonProperty(PropertyName = "enrollment_total")]
-        public int EnrollmentTotal { get; private set; }
+        public int? EnrollmentTotal { get; private set; }
 
         [JsonProperty(PropertyName = "instructors")]
         public List<string> Instructors { get; private set; }
@@ -50,7 +50,7 @@ namespace UWaterlooAPIDotNet.Models.Buildings
         public string RoomNumber { get; private set; }
 
         [JsonProperty(PropertyName = "term")]
-        public int Term { get; private set; }
+        public int? Term { get; private set; }
 
         [JsonProperty(PropertyName = "last_updated")]
         private string LastUpdatedString { get; set; }

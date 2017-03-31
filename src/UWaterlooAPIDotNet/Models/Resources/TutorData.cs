@@ -15,7 +15,7 @@ namespace UWaterlooAPIDotNet.Models.Resources
         public string Title { get; private set; }
 
         [JsonProperty(PropertyName = "tutors_count")]
-        public int Tutors { get; private set; }
+        public int? Tutors { get; private set; }
 
         [JsonProperty(PropertyName = "contact_url")]
         public Uri ContactURL { get; private set; }

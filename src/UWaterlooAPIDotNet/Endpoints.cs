@@ -5,17 +5,17 @@ namespace UWaterlooAPIDotNet
     public static class Endpoints
     {
         private static readonly Dictionary<string, string> m_endpoints = new Dictionary<string, string>() {
-            { "FS_MENU",                  "/foodservices/menu" },                      // Not Implemented
-            { "FS_NOTES",                 "/foodservices/notes" },                     // Not Implemented
-            { "FS_DIETS",                 "/foodservices/diets" },                     // Not Implemented
-            { "FS_OUTLETS",               "/foodservices/outlets" },                   // Not Implemented
-            { "FS_LOCATIONS",             "/foodservices/locations" },                 // Not Implemented
-            { "FS_WATCARD",               "/foodservices/watcard" },                   // Not Implemented
-            { "FS_ANNOUNCEMENTS",         "/foodservices/announcements" },             // Not Implemented
-            { "FS_PRODUCT_BYSPEC",        "/foodservices/products/{0}" },              // Not Implemented
-            { "FS_MENU_BYSPEC",           "/foodservices/{0}/{1}/menu" },              // Not Implemented
-            { "FS_NOTE_BYSPEC",           "/foodservices/{0}/{1}/notes" },             // Not Implemented
-            { "FS_ANNOUNCEMENT_BYSPEC",   "/foodservices/{0}/{1}/announcements" },     // Not Implemented
+            { "FS_MENU",                  "/foodservices/menu" },
+            { "FS_NOTES",                 "/foodservices/notes" },
+            { "FS_DIETS",                 "/foodservices/diets" },
+            { "FS_OUTLETS",               "/foodservices/outlets" },
+            { "FS_LOCATIONS",             "/foodservices/locations" },
+            { "FS_WATCARD",               "/foodservices/watcard" },
+            { "FS_ANNOUNCEMENTS",         "/foodservices/announcements" },
+            { "FS_PRODUCT_BYSPEC",        "/foodservices/products/{0}" },
+            { "FS_MENU_BYSPEC",           "/foodservices/{0}/{1}/menu" },
+            { "FS_NOTE_BYSPEC",           "/foodservices/{0}/{1}/notes" },
+            { "FS_ANNOUNCEMENT_BYSPEC",   "/foodservices/{0}/{1}/announcements" },
             { "FEDS_EVENTS",              "/feds/events" },                            // Not Implemented
             { "FEDS_EVENTS_BYID",         "/feds/events/{0}" },                        // Not Implemented
             { "FEDS_LOCATIONS",           "/feds/locations" },                         // Not Implemented

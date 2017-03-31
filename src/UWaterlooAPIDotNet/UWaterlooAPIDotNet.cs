@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using NodaTime;
+using UWaterlooAPIDotNet.Modules;
 
 namespace UWaterlooAPIDotNet
 {
@@ -11,17 +12,18 @@ namespace UWaterlooAPIDotNet
         private string m_apikey;
         private HttpClient m_client;
 
-        public Modules.Weather Weather { get; }
-        public Modules.Terms Terms { get; }
-        public Modules.Resources Resources { get; }
-        public Modules.Codes Codes { get; }
-        public Modules.Buildings Buildings { get; }
-        public Modules.PointsOfInterest PointsOfInterest { get; }
-        public Modules.Parking Parking { get; }
-        public Modules.Transit Transit { get; }
-        public Modules.Directory Directory { get; }
-        public Modules.API API { get; }
-        public Modules.Server Server { get; }
+        public readonly FoodServices FoodServices;
+        public readonly Weather Weather;
+        public readonly Terms Terms;
+        public readonly Resources Resources;
+        public readonly Codes Codes;
+        public readonly Buildings Buildings;
+        public readonly PointsOfInterest PointsOfInterest;
+        public readonly Parking Parking;
+        public readonly Transit Transit;
+        public readonly Directory Directory;
+        public readonly API API;
+        public readonly Server Server;
 
         public UWaterlooAPI(string apikey)
         {
@@ -29,17 +31,18 @@ namespace UWaterlooAPIDotNet
             m_client = new HttpClient();
             m_client.BaseAddress = new Uri("https://api.uwaterloo.ca");
 
-            Weather = new Modules.Weather(m_apikey, m_client);
-            Terms = new Modules.Terms(m_apikey, m_client);
-            Resources = new Modules.Resources(m_apikey, m_client);
-            Codes = new Modules.Codes(m_apikey, m_client);
-            Buildings = new Modules.Buildings(m_apikey, m_client);
-            PointsOfInterest = new Modules.PointsOfInterest(m_apikey, m_client);
-            Parking = new Modules.Parking(m_apikey, m_client);
-            Transit = new Modules.Transit(m_apikey, m_client);
-            Directory = new Modules.Directory(m_apikey, m_client);
-            API = new Modules.API(m_apikey, m_client);
-            Server = new Modules.Server(m_apikey, m_client);
+            FoodServices = new FoodServices(m_apikey, m_client);
+            Weather = new Weather(m_apikey, m_client);
+            Terms = new Terms(m_apikey, m_client);
+            Resources = new Resources(m_apikey, m_client);
+            Codes = new Codes(m_apikey, m_client);
+            Buildings = new Buildings(m_apikey, m_client);
+            PointsOfInterest = new PointsOfInterest(m_apikey, m_client);
+            Parking = new Parking(m_apikey, m_client);
+            Transit = new Transit(m_apikey, m_client);
+            Directory = new Directory(m_apikey, m_client);
+            API = new API(m_apikey, m_client);
+            Server = new Server(m_apikey, m_client);
         }
 
         public void Dispose() {

@@ -9,6 +9,6 @@ namespace UWaterlooAPIDotNet.Models.API
         public decimal? VersionNumber { get; private set; }
 
         [JsonProperty(PropertyName = "release_date")]
-        public DateTime ReleaseDate { get; private set; }
+        public DateTime? ReleaseDate { get; private set; }
     }
 }

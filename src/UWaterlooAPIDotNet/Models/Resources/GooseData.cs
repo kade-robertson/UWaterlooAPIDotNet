@@ -7,7 +7,7 @@ namespace UWaterlooAPIDotNet.Models.Resources
     public class GooseData
     {
         [JsonProperty(PropertyName = "id")]
-        public int ID { get; private set; }
+        public int? ID { get; private set; }
 
         [JsonProperty(PropertyName = "location")]
         public string Location { get; private set; }

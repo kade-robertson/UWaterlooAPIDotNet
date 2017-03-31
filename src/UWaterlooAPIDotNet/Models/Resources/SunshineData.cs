@@ -19,10 +19,10 @@ namespace UWaterlooAPIDotNet.Models.Resources
 
         [JsonProperty(PropertyName = "salary_paid")]
         [JsonConverter(typeof(DecimalCurrenyConverter))]
-        public decimal SalaryPaid { get; private set; }
+        public decimal? SalaryPaid { get; private set; }
 
         [JsonProperty(PropertyName = "taxable_benefits")]
         [JsonConverter(typeof(DecimalCurrenyConverter))]
-        public decimal TaxableBenefits { get; private set; }
+        public decimal? TaxableBenefits { get; private set; }
     }
 }

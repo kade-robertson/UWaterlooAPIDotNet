@@ -10,13 +10,13 @@ namespace UWaterlooAPIDotNet.Models.Parking
         public new string Name { get; private set; }
 
         [JsonProperty(PropertyName = "capacity")]
-        public int Capacity { get; private set; }
+        public int? Capacity { get; private set; }
 
         [JsonProperty(PropertyName = "current_count")]
-        public int CurrentCount { get; private set; }
+        public int? CurrentCount { get; private set; }
 
         [JsonProperty(PropertyName = "percent_filled")]
-        public int PercentFilled { get; private set; }
+        public int? PercentFilled { get; private set; }
 
         [JsonProperty(PropertyName = "last_updated")]
         private string LastUpdatedString { get; set; }
