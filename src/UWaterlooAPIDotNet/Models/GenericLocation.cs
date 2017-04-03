@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace UWaterlooAPIDotNet.Models.Events
+namespace UWaterlooAPIDotNet.Models
 {
-    public class EventLocation
+    public class GenericLocation
     {
         [JsonProperty(PropertyName = "id")]
         public int? ID { get; private set; }

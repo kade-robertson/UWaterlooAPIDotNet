@@ -31,7 +31,7 @@ namespace UWaterlooAPIDotNet.Models.Events
         public GenericImage Image { get; private set; }
 
         [JsonProperty(PropertyName = "location")]
-        public EventLocation Location { get; private set; }
+        public GenericLocation Location { get; private set; }
 
         [JsonProperty(PropertyName = "revision_id")]
         public int? RevisionID { get; private set; }
