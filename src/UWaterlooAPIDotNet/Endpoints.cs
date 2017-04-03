@@ -33,8 +33,8 @@ namespace UWaterlooAPIDotNet
             { "EVENTS_BYSITE",            "/events/{0}" },
             { "EVENTS_BYSPEC",            "/events/{0}/{1}" },
             { "EVENTS_HOLIDAYS",          "/events/holidays" },
-            { "BLOGS_BYSITE",             "/blogs/{0}" },                              // Not Implemented
-            { "BLOGS_BYSPEC",             "/blogs/{0}/{1}" },                          // Not Implemented
+            { "BLOGS_BYSITE",             "/blogs/{0}" },
+            { "BLOGS_BYSPEC",             "/blogs/{0}/{1}" },
             { "NEWS_ALL",                 "/news" },                                   // Not Implemented
             { "NEWS_BYSITE",              "/news/{0}" },                               // Not Implemented
             { "NEWS_BYSPEC",              "/news/{0}/{1}" },                           // Not Implemented
