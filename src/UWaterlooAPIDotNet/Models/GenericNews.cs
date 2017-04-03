@@ -5,7 +5,7 @@ using System;
 namespace UWaterlooAPIDotNet.Models
 {
     public class GenericNews 
-   {
+    {
         [JsonProperty(PropertyName = "id")]
         public int? ID { get; private set; }
 

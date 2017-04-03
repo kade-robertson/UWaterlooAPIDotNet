@@ -38,9 +38,9 @@ namespace UWaterlooAPIDotNet
             { "NEWS_ALL",                 "/news" },
             { "NEWS_BYSITE",              "/news/{0}" },
             { "NEWS_BYSPEC",              "/news/{0}/{1}" },
-            { "OPPORTUNITIES_ALL",        "/opportunities" },                          // Not Implemented
-            { "OPPORTUNITIES_BYSITE",     "/opportunities/{0}" },                      // Not Implemented
-            { "OPPORTUNITIES_BYSPEC",     "/opportunities/{0}/{1}" },                  // Not Implemented
+            { "OPPORTUNITIES_ALL",        "/opportunities" },
+            { "OPPORTUNITIES_BYSITE",     "/opportunities/{0}" },
+            { "OPPORTUNITIES_BYSPEC",     "/opportunities/{0}/{1}" },
             { "SERVICES_BYSITE",          "/services/{0}" },                           // Not Implemented
             { "WEATHER_CURRENT",          "/weather/current" },
             { "TERMS_LIST",               "/terms/list" },

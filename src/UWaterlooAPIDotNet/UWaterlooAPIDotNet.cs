@@ -19,6 +19,7 @@ namespace UWaterlooAPIDotNet
         public readonly Events Events;
         public readonly Blogs Blogs;
         public readonly News News;
+        public readonly Opportunities Opportunities;
         public readonly Weather Weather;
         public readonly Terms Terms;
         public readonly Resources Resources;
@@ -44,6 +45,7 @@ namespace UWaterlooAPIDotNet
             Events = new Events(m_apikey, m_client);
             Blogs = new Blogs(m_apikey, m_client);
             News = new News(m_apikey, m_client);
+            Opportunities = new Opportunities(m_apikey, m_client);
             Weather = new Weather(m_apikey, m_client);
             Terms = new Terms(m_apikey, m_client);
             Resources = new Resources(m_apikey, m_client);
