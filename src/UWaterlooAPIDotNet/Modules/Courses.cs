@@ -53,14 +53,6 @@ namespace UWaterlooAPIDotNet.Modules
             return GetAsync<ClassSchedule>("CR_COURSES_SCHED_BYCN", m_baseparam, class_number.ToString());
         }
 
-        public RunResult<ExtendedCourse> GetCourseInfo(string subject, string catalog_number) {
-            return Get<ExtendedCourse>("CR_COURSES_BYSUB", m_baseparam);
-        }
-
-        public Task<RunResult<ExtendedCourse>> GetCourseInfoAsync(string subject, string catalog_number) {
-            return GetAsync<ExtendedCourse>("CR_COURSES_BYSUB", m_baseparam);
-        }
-
         public RunResult<ExtendedCourse> GetCourseDetails(string subject, string catalog_number) {
             return Get<ExtendedCourse>("CR_COURSE_BYSPEC", m_baseparam, subject, catalog_number);
         }
@@ -77,6 +69,14 @@ namespace UWaterlooAPIDotNet.Modules
             return GetAsync<List<ClassSchedule>>("CR_COURSE_SCHED_BYSPEC", m_baseparam, subject, catalog_number);
         }
 
+        public RunResult<List<ClassSchedule>> GetCourseSchedules(BasicCourse course) {
+            return GetCourseSchedules(course.Subject, course.CatalogNumber);
+        }
+
+        public Task<RunResult<List<ClassSchedule>>> GetCourseSchedulesAsync(BasicCourse course) {
+            return GetCourseSchedulesAsync(course.Subject, course.CatalogNumber);
+        }
+
         public RunResult<CoursePrerequisites> GetCoursePrerequisites(string subject, string catalog_number) {
             return Get<CoursePrerequisites>("CR_COURSE_PREQ_BYSPEC", m_baseparam, subject, catalog_number);
         }
@@ -85,12 +85,28 @@ namespace UWaterlooAPIDotNet.Modules
             return GetAsync<CoursePrerequisites>("CR_COURSE_PREQ_BYSPEC", m_baseparam, subject, catalog_number);
         }
 
+        public RunResult<CoursePrerequisites> GetCoursePrerequisites(BasicCourse course) {
+            return GetCoursePrerequisites(course.Subject, course.CatalogNumber);
+        }
+
+        public Task<RunResult<CoursePrerequisites>> GetCoursePrerequisitesAsync(BasicCourse course) {
+            return GetCoursePrerequisitesAsync(course.Subject, course.CatalogNumber);
+        }
+
         public RunResult<ExamData> GetCourseExamSchedule(string subject, string catalog_number) {
             return Get<ExamData>("CR_COURSE_EXAMS_BYSPEC", m_baseparam, subject, catalog_number);
         }
 
         public Task<RunResult<ExamData>> GetCourseExamScheduleAsync(string subject, string catalog_number) {
             return GetAsync<ExamData>("CR_COURSE_EXAMS_BYSPEC", m_baseparam, subject, catalog_number);
+        }
+
+        public RunResult<ExamData> GetCourseExamSchedule(BasicCourse course) {
+            return GetCourseExamSchedule(course.Subject, course.CatalogNumber);
+        }
+
+        public Task<RunResult<ExamData>> GetCourseExamScheduleAsync(BasicCourse course) {
+            return GetCourseExamScheduleAsync(course.Subject, course.CatalogNumber);
         }
     }
 }

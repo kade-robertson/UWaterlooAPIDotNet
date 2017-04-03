@@ -19,14 +19,14 @@ namespace UWaterlooAPIDotNet
             { "FEDS_EVENTS",              "/feds/events" },
             { "FEDS_EVENTS_BYID",         "/feds/events/{0}" },
             { "FEDS_LOCATIONS",           "/feds/locations" },
-            { "CR_COURSES",               "/courses" },                                // Not Implemented
-            { "CR_COURSES_BYSUB",         "/courses/{0}" },                            // Not Implemented
-            { "CR_COURSES_BYID",          "/courses/{0}" },                            // Not Implemented
-            { "CR_COURSES_SCHED_BYCN",    "/courses/{0}/schedule" },                   // Not Implemented
-            { "CR_COURSE_BYSPEC",         "/courses/{0}/{1}" },                        // Not Implemented
-            { "CR_COURSE_SCHED_BYSPEC",   "/courses/{0}/{1}/schedule" },               // Not Implemented
-            { "CR_COURSE_PREQ_BYSPEC",    "/courses/{0}/{1}/prerequisites" },          // Not Implemented
-            { "CR_COURSE_EXAMS_BYSPEC",   "/courses/{0}/{1}/examschedule" },           // Not Implemented
+            { "CR_COURSES",               "/courses" },
+            { "CR_COURSES_BYSUB",         "/courses/{0}" },
+            { "CR_COURSES_BYID",          "/courses/{0}" },
+            { "CR_COURSES_SCHED_BYCN",    "/courses/{0}/schedule" },
+            { "CR_COURSE_BYSPEC",         "/courses/{0}/{1}" },
+            { "CR_COURSE_SCHED_BYSPEC",   "/courses/{0}/{1}/schedule" },
+            { "CR_COURSE_PREQ_BYSPEC",    "/courses/{0}/{1}/prerequisites" },
+            { "CR_COURSE_EXAMS_BYSPEC",   "/courses/{0}/{1}/examschedule" },
             { "AWARDS_GRADUATE",          "/awards/graduate" },                        // Not Implemented
             { "AWARDS_UNDERGRADUATE",     "/awards/undergraduate" },                   // Not Implemented
             { "EVENTS_ALL",               "/events" },                                 // Not Implemented
