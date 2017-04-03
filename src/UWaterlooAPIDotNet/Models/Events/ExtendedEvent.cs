@@ -28,7 +28,7 @@ namespace UWaterlooAPIDotNet.Models.Events
         public EventWebsite Host { get; private set; }
 
         [JsonProperty(PropertyName = "image")]
-        public EventImage Image { get; private set; }
+        public GenericImage Image { get; private set; }
 
         [JsonProperty(PropertyName = "location")]
         public EventLocation Location { get; private set; }

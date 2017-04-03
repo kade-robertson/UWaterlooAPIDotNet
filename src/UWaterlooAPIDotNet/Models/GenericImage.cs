@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace UWaterlooAPIDotNet.Models.Events
+namespace UWaterlooAPIDotNet.Models
 {
-    public class EventImage
+    public class GenericImage
     {
         [JsonProperty(PropertyName = "id")]
         public int? ID { get; private set; }

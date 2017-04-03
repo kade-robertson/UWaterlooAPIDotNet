@@ -29,10 +29,10 @@ namespace UWaterlooAPIDotNet
             { "CR_COURSE_EXAMS_BYSPEC",   "/courses/{0}/{1}/examschedule" },
             { "AWARDS_GRADUATE",          "/awards/graduate" },
             { "AWARDS_UNDERGRADUATE",     "/awards/undergraduate" },
-            { "EVENTS_ALL",               "/events" },                                 // Not Implemented
-            { "EVENTS_BYSITE",            "/events/{0}" },                             // Not Implemented
-            { "EVENTS_BYSPEC",            "/events/{0}/{1}" },                         // Not Implemented
-            { "EVENTS_HOLIDAYS",          "/events/holidays" },                        // Not Implemented
+            { "EVENTS_ALL",               "/events" },
+            { "EVENTS_BYSITE",            "/events/{0}" },
+            { "EVENTS_BYSPEC",            "/events/{0}/{1}" },
+            { "EVENTS_HOLIDAYS",          "/events/holidays" },
             { "BLOGS_BYSITE",             "/blogs/{0}" },                              // Not Implemented
             { "BLOGS_BYSPEC",             "/blogs/{0}/{1}" },                          // Not Implemented
             { "NEWS_ALL",                 "/news" },                                   // Not Implemented

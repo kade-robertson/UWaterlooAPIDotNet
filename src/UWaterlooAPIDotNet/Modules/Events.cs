@@ -49,5 +49,13 @@ namespace UWaterlooAPIDotNet.Modules
         public Task<RunResult<ExtendedEvent>> GetEventDetailsAsync(Event ievent) {
             return GetEventDetailsAsync(ievent.SiteName, (int)ievent.ID);
         }
+
+        public RunResult<List<Holiday>> GetUniversityHolidays() {
+            return Get<List<Holiday>>("EVENTS_HOLIDAYS", m_baseparam);
+        }
+
+        public Task<RunResult<List<Holiday>>> GetUniversityHolidaysAsync() {
+            return GetAsync<List<Holiday>>("EVENTS_HOLIDAYS", m_baseparam);
+        }
     }
 }

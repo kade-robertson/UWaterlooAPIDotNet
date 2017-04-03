@@ -34,7 +34,9 @@ namespace UWaterlooAPIDotNet.Modules
             try {
                 var message = new HttpRequestMessage(HttpMethod.Get, Endpoints.GetEndpoint(endpoint_name, args) + parameters);
                 var result = m_client.SendAsync(message).Result;
-                var data = JsonConvert.DeserializeObject<Response<T>>(result.Content.ReadAsStringAsync().Result);
+                var inter = result.Content.ReadAsStringAsync().Result;
+                var problem = inter.Substring(1250, 20);
+                var data = JsonConvert.DeserializeObject<Response<T>>(inter);
                 return new RunResult<T>(data);
             } catch (Exception ex) {
                 return new RunResult<T>(ex);
