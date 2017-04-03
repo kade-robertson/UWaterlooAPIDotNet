@@ -12,9 +12,6 @@ namespace UWaterlooAPIDotNet.Models
         [JsonProperty(PropertyName = "title")]
         public string Title { get; private set; }
 
-        [JsonProperty(PropertyName = "site")]
-        public string SiteID { get; private set; }
-
         [JsonProperty(PropertyName = "published")]
         private string DatePublishedString { get; set; }
 

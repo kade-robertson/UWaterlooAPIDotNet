@@ -35,9 +35,9 @@ namespace UWaterlooAPIDotNet
             { "EVENTS_HOLIDAYS",          "/events/holidays" },
             { "BLOGS_BYSITE",             "/blogs/{0}" },
             { "BLOGS_BYSPEC",             "/blogs/{0}/{1}" },
-            { "NEWS_ALL",                 "/news" },                                   // Not Implemented
-            { "NEWS_BYSITE",              "/news/{0}" },                               // Not Implemented
-            { "NEWS_BYSPEC",              "/news/{0}/{1}" },                           // Not Implemented
+            { "NEWS_ALL",                 "/news" },
+            { "NEWS_BYSITE",              "/news/{0}" },
+            { "NEWS_BYSPEC",              "/news/{0}/{1}" },
             { "OPPORTUNITIES_ALL",        "/opportunities" },                          // Not Implemented
             { "OPPORTUNITIES_BYSITE",     "/opportunities/{0}" },                      // Not Implemented
             { "OPPORTUNITIES_BYSPEC",     "/opportunities/{0}/{1}" },                  // Not Implemented
