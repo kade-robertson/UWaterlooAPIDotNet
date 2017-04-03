@@ -27,8 +27,8 @@ namespace UWaterlooAPIDotNet
             { "CR_COURSE_SCHED_BYSPEC",   "/courses/{0}/{1}/schedule" },
             { "CR_COURSE_PREQ_BYSPEC",    "/courses/{0}/{1}/prerequisites" },
             { "CR_COURSE_EXAMS_BYSPEC",   "/courses/{0}/{1}/examschedule" },
-            { "AWARDS_GRADUATE",          "/awards/graduate" },                        // Not Implemented
-            { "AWARDS_UNDERGRADUATE",     "/awards/undergraduate" },                   // Not Implemented
+            { "AWARDS_GRADUATE",          "/awards/graduate" },
+            { "AWARDS_UNDERGRADUATE",     "/awards/undergraduate" },
             { "EVENTS_ALL",               "/events" },                                 // Not Implemented
             { "EVENTS_BYSITE",            "/events/{0}" },                             // Not Implemented
             { "EVENTS_BYSPEC",            "/events/{0}/{1}" },                         // Not Implemented

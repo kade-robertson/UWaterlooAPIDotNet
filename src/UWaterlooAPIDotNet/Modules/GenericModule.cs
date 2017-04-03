@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using UWaterlooAPIDotNet.Models;
@@ -22,7 +23,7 @@ namespace UWaterlooAPIDotNet.Modules
             try { 
                 var message = new HttpRequestMessage(HttpMethod.Get, Endpoints.GetEndpoint(endpoint_name) + parameters);
                 var result = m_client.SendAsync(message).Result;
-                var data = JsonConvert.DeserializeObject<Response<T>>(result.Content.ReadAsStringAsync().Result);
+                var data = JsonConvert.DeserializeObject<Response<T>>(WebUtility.HtmlDecode(result.Content.ReadAsStringAsync().Result));
                 return new RunResult<T>(data);
             } catch (Exception ex) {
                 return new RunResult<T>(ex);
@@ -33,7 +34,7 @@ namespace UWaterlooAPIDotNet.Modules
             try {
                 var message = new HttpRequestMessage(HttpMethod.Get, Endpoints.GetEndpoint(endpoint_name, args) + parameters);
                 var result = m_client.SendAsync(message).Result;
-                var data = JsonConvert.DeserializeObject<Response<T>>(result.Content.ReadAsStringAsync().Result);
+                var data = JsonConvert.DeserializeObject<Response<T>>(WebUtility.HtmlDecode(result.Content.ReadAsStringAsync().Result));
                 return new RunResult<T>(data);
             } catch (Exception ex) {
                 return new RunResult<T>(ex);
@@ -44,7 +45,7 @@ namespace UWaterlooAPIDotNet.Modules
             try {
                 var message = new HttpRequestMessage(HttpMethod.Get, Endpoints.GetEndpoint(endpoint_name) + parameters);
                 var result = await m_client.SendAsync(message).ConfigureAwait(false);
-                var data = JsonConvert.DeserializeObject<Response<T>>(await result.Content.ReadAsStringAsync().ConfigureAwait(false));
+                var data = JsonConvert.DeserializeObject<Response<T>>(WebUtility.HtmlDecode(await result.Content.ReadAsStringAsync().ConfigureAwait(false)));
                 return new RunResult<T>(data);
             } catch (Exception ex) {
                 return new RunResult<T>(ex);
@@ -55,7 +56,7 @@ namespace UWaterlooAPIDotNet.Modules
             try {
                 var message = new HttpRequestMessage(HttpMethod.Get, Endpoints.GetEndpoint(endpoint_name, args) + parameters);
                 var result = await m_client.SendAsync(message).ConfigureAwait(false);
-                var data = JsonConvert.DeserializeObject<Response<T>>(await result.Content.ReadAsStringAsync().ConfigureAwait(false));
+                var data = JsonConvert.DeserializeObject<Response<T>>(WebUtility.HtmlDecode(await result.Content.ReadAsStringAsync().ConfigureAwait(false)));
                 return new RunResult<T>(data);
             } catch (Exception ex) {
                 return new RunResult<T>(ex);
