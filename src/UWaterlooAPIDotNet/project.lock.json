@@ -145,7 +145,7 @@
           "lib/netstandard1.3/Newtonsoft.Json.dll": {}
         }
       },
-      "NodaTime/2.0.0-rc3": {
+      "NodaTime/2.0.0": {
         "type": "package",
         "dependencies": {
           "NETStandard.Library": "1.6.1",
@@ -1380,16 +1380,16 @@
         "tools/install.ps1"
       ]
     },
-    "NodaTime/2.0.0-rc3": {
-      "sha512": "Q5hAXKFjagTcUX11HhCyjd/5wh5TPl1EMXZ18S0ApmeA4jMiVnmf2/xLrEKznD3PfqXutP9M4c7w+mjFfotFwA==",
+    "NodaTime/2.0.0": {
+      "sha512": "d6H9wjHKvKcDO/nTWRn2nasYDmMEdOiBdccKwLmyqnv5vYk1ZVbJwTH8qNJZqbQ+YQFYfqqVPY0IgutnOrm9Kg==",
       "type": "package",
-      "path": "NodaTime/2.0.0-rc3",
+      "path": "NodaTime/2.0.0",
       "files": [
         "lib/net45/NodaTime.dll",
         "lib/net45/NodaTime.xml",
         "lib/netstandard1.3/NodaTime.dll",
         "lib/netstandard1.3/NodaTime.xml",
-        "nodatime.2.0.0-rc3.nupkg.sha512",
+        "nodatime.2.0.0.nupkg.sha512",
         "nodatime.nuspec"
       ]
     },
@@ -4793,7 +4793,7 @@
     "": [
       "NETStandard.Library >= 1.6.1",
       "Newtonsoft.Json >= 10.0.1",
-      "NodaTime >= 2.0.0-rc3",
+      "NodaTime >= 2.0.0",
       "System.Net.Http >= 4.3.1"
     ],
     ".NETStandard,Version=v1.3": []

@@ -30,7 +30,7 @@ UWaterlooAPIDotNet follows [Semantic Versioning 2.0.0](http://semver.org/#semant
 
   - [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/), version 1.6.0+
   - [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/), version 10.0.1+
-  - [NodaTime](https://www.nuget.org/packages/NodaTime/), version 2.0.0-rc3+
+  - [NodaTime](https://www.nuget.org/packages/NodaTime/), version 2.0.0+
   - [System.Net.Http](https://www.nuget.org/packages/System.Net.Http/), version 4.3.1+
 
 # Usage

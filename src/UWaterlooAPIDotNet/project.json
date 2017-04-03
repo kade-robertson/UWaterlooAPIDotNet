@@ -1,10 +1,13 @@
-﻿{
+{
+  "title": "UWaterlooAPIDotNet",
+  "copyright": "Copyright (c) 2017 Kade Robertson",
+  "description": "UWaterlooAPIDotNet",
   "version": "1.0.0-*",
 
   "dependencies": {
     "NETStandard.Library": "1.6.1",
     "Newtonsoft.Json": "10.0.1",
-    "NodaTime": "2.0.0-rc3",
+    "NodaTime": "2.0.0",
     "System.Net.Http": "4.3.1"
   },
 
