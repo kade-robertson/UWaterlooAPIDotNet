@@ -13,6 +13,7 @@ namespace UWaterlooAPIDotNet
         private HttpClient m_client;
 
         public readonly FoodServices FoodServices;
+        public readonly Feds Feds;
         public readonly Weather Weather;
         public readonly Terms Terms;
         public readonly Resources Resources;
@@ -32,6 +33,7 @@ namespace UWaterlooAPIDotNet
             m_client.BaseAddress = new Uri("https://api.uwaterloo.ca");
 
             FoodServices = new FoodServices(m_apikey, m_client);
+            Feds = new Modules.Feds(m_apikey, m_client);
             Weather = new Weather(m_apikey, m_client);
             Terms = new Terms(m_apikey, m_client);
             Resources = new Resources(m_apikey, m_client);

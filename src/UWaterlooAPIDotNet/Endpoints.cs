@@ -16,9 +16,9 @@ namespace UWaterlooAPIDotNet
             { "FS_MENU_BYSPEC",           "/foodservices/{0}/{1}/menu" },
             { "FS_NOTE_BYSPEC",           "/foodservices/{0}/{1}/notes" },
             { "FS_ANNOUNCEMENT_BYSPEC",   "/foodservices/{0}/{1}/announcements" },
-            { "FEDS_EVENTS",              "/feds/events" },                            // Not Implemented
-            { "FEDS_EVENTS_BYID",         "/feds/events/{0}" },                        // Not Implemented
-            { "FEDS_LOCATIONS",           "/feds/locations" },                         // Not Implemented
+            { "FEDS_EVENTS",              "/feds/events" },
+            { "FEDS_EVENTS_BYID",         "/feds/events/{0}" },
+            { "FEDS_LOCATIONS",           "/feds/locations" },
             { "CR_COURSES",               "/courses" },                                // Not Implemented
             { "CR_COURSES_BYSUB",         "/courses/{0}" },                            // Not Implemented
             { "CR_COURSES_BYID",          "/courses/{0}" },                            // Not Implemented
