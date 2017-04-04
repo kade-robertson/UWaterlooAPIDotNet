@@ -1,5 +1,10 @@
 # UWaterlooAPIDotNet
 
+[![NuGet](https://img.shields.io/nuget/v/UWaterlooAPIDotNet.svg?style=flat-square)](https://www.nuget.org/packages/UWaterlooAPIDotNet)
+[![GitHub stars](https://img.shields.io/github/stars/kade-robertson/UWaterlooAPIDotNet.svg?style=flat-square)](https://github.com/kade-robertson/UWaterlooAPIDotNet/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/kade-robertson/UWaterlooAPIDotNet.svg?style=flat-square)](https://github.com/kade-robertson/UWaterlooAPIDotNet/issues)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/kade-robertson/UWaterlooAPIDotNet/master/LICENSE.md)
+
 UWaterlooAPIDotNet provides an up-to-date, fully asynchronous and multi-platform wrapper for
 the University of Waterloo's API. The library has been built upon .NET Standard 1.3 to allow use
 of the wrapper on almost any platform. You can find a compatibilty chart below. 
