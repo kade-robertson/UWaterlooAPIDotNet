@@ -2,7 +2,7 @@
   "title": "UWaterlooAPIDotNet",
   "copyright": "Copyright (c) 2017 Kade Robertson",
   "description": "UWaterlooAPIDotNet",
-  "version": "1.0.0-*",
+  "version": "1.0.1-*",
 
   "dependencies": {
     "NETStandard.Library": "1.6.1",
