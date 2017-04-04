@@ -1,8 +1,15 @@
 {
   "title": "UWaterlooAPIDotNet",
   "copyright": "Copyright (c) 2017 Kade Robertson",
-  "description": "UWaterlooAPIDotNet",
+  "description": "A .NET Wrapper for the UWaterloo API.",
   "version": "1.0.1-*",
+  "authors": [ "krobertson" ],
+  "packOptions": {
+    "projectUrl": "https://github.com/kade-robertson/UWaterlooAPIDotNet",
+    "licenseUrl": "https://github.com/kade-robertson/UWaterlooAPIDotNet/blob/master/LICENSE.md",
+    "requireLicenseAcceptance": true,
+    "owners": [ "krobertson" ]
+  },
 
   "dependencies": {
     "NETStandard.Library": "1.6.1",
