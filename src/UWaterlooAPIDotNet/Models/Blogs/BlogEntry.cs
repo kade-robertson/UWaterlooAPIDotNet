@@ -37,7 +37,7 @@ namespace UWaterlooAPIDotNet.Models.Blogs
         public string Author { get; private set; }
 
         /// <summary>
-        /// The delegated author of the blog entry.
+        /// The <see cref="Blogs.DelegatedAuthor"/>  of the blog entry.
         /// </summary>
         [JsonProperty(PropertyName = "delegated_author")]
         public DelegatedAuthor DelegatedAuthor { get; private set; }

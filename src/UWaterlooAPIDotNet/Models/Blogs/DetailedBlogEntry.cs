@@ -20,13 +20,13 @@ namespace UWaterlooAPIDotNet.Models.Blogs
         public string RawDescription { get; private set; }
 
         /// <summary>
-        /// The list of targeted audiences by the blog entry.
+        /// The <see cref="List{T}"/> of targeted audiences by the blog entry.
         /// </summary>
         [JsonProperty(PropertyName = "audience")]
         public List<string> Audience { get; private set; }
 
         /// <summary>
-        /// The main image used in the blog entry.
+        /// The <see cref="GenericImage"/> used in the blog entry.
         /// </summary>
         [JsonProperty(PropertyName = "image")]
         public GenericImage Image { get; private set; }

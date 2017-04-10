@@ -19,8 +19,9 @@ namespace UWaterlooAPIDotNet.Models.Blogs
         public string Name { get; private set; }
 
         /// <summary>
-        /// A dictionary of various author attributes.
+        /// A <see cref="Dictionary{TKey, TValue}"/> of various author attributes.
         /// </summary>
+        /// <typeparam name="
         [JsonProperty(PropertyName = "attributes")]
         public Dictionary<string, string> Attributes { get; private set; }
 
