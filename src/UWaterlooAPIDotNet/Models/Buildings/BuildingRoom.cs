@@ -74,7 +74,7 @@ namespace UWaterlooAPIDotNet.Models.Buildings
         public int? EnrollmentTotal { get; private set; }
 
         /// <summary>
-        /// A list of instructors for the section.
+        /// A <see cref="List{T}"/> of instructors for the section.
         /// </summary>
         [JsonProperty(PropertyName = "instructors")]
         public List<string> Instructors { get; private set; }

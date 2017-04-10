@@ -43,7 +43,7 @@ namespace UWaterlooAPIDotNet.Models.Buildings
         public decimal? Longitude { get; private set; }
 
         /// <summary>
-        /// A list of sections of the building, if available.
+        /// A <see cref="List{T}"/> of <see cref="BuildingSection"/>, if available.
         /// </summary>
         [JsonProperty(PropertyName = "building_sections")]
         public List<BuildingSection> Sections { get; private set; }

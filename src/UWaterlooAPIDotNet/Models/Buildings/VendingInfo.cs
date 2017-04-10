@@ -18,7 +18,7 @@ namespace UWaterlooAPIDotNet.Models.Buildings
         public int? Machines { get; private set; }
 
         /// <summary>
-        /// The products available from the vending machines.
+        /// The <see cref="List{T}"/> of products available from the vending machines.
         /// </summary>
         [JsonProperty(PropertyName = "products")]
         public List<string> Products { get; private set; }
