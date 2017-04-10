@@ -13,7 +13,7 @@ namespace UWaterlooAPIDotNet.Modules
         /// <summary>
         /// Obtain a <see cref="List{T}"/> of all available graduate awards.
         /// </summary>
-        /// <returns>A <see cref="List{T}"/> of <see cref="Award"/>.</returns>
+        /// <returns>A <see cref="List{T}"/> of <see cref="Award"/>, if applicable.</returns>
         public RunResult<List<Award>> GetGraduateAwards() {
             return Get<List<Award>>("AWARDS_GRADUATE", m_baseparam);
         }
@@ -21,7 +21,7 @@ namespace UWaterlooAPIDotNet.Modules
         /// <summary>
         /// Obtain a <see cref="List{T}"/> of all available graduate awards.
         /// </summary>
-        /// <returns>An awaitable task of a <see cref="List{T}"/> of <see cref="Award"/>.</returns>
+        /// <returns>An awaitable task of a <see cref="List{T}"/> of <see cref="Award"/>, if applicable.</returns>
         public Task<RunResult<List<Award>>> GetGraduateAwardsAsync() {
             return GetAsync<List<Award>>("AWARDS_GRADUATE", m_baseparam);
         }
@@ -29,7 +29,7 @@ namespace UWaterlooAPIDotNet.Modules
         /// <summary>
         /// Obtain a <see cref="List{T}"/> of all available undergraduate awards.
         /// </summary>
-        /// <returns>A <see cref="List{T}"/> of <see cref="Award"/>.</returns>
+        /// <returns>A <see cref="List{T}"/> of <see cref="Award"/>, if applicable.</returns>
         public RunResult<List<Award>> GetUndergraduateAwards() {
             return Get<List<Award>>("AWARDS_UNDERGRADUATE", m_baseparam);
         }
@@ -37,7 +37,7 @@ namespace UWaterlooAPIDotNet.Modules
         /// <summary>
         /// Obtain a <see cref="List{T}"/> of all available undergraduate awards.
         /// </summary>
-        /// <returns>An awaitable task of a <see cref="List{T}"/> of <see cref="Award"/>.</returns>
+        /// <returns>An awaitable task of a <see cref="List{T}"/> of <see cref="Award"/>, if applicable.</returns>
         public Task<RunResult<List<Award>>> GetUndergraduateAwardsAsync() {
             return GetAsync<List<Award>>("AWARDS_UNDERGRADUATE", m_baseparam);
         }

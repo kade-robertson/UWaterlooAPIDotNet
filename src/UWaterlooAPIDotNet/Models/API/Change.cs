@@ -13,7 +13,7 @@ namespace UWaterlooAPIDotNet.Models.API
         public DateTime? Date { get; private set; }
 
         /// <summary>
-        /// A list of strings indicating what changes were made.
+        /// A <see cref="List{T}"/> of strings indicating what changes were made.
         /// </summary>
         [JsonProperty(PropertyName = "changes")]
         public List<string> Changes { get; private set; }

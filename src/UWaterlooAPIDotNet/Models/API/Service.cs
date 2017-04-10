@@ -49,7 +49,7 @@ namespace UWaterlooAPIDotNet.Models.API
         public Uri ServiceURL { get; private set; }
 
         /// <summary>
-        /// The list of methods available with the service.
+        /// The <see cref="List{T}"/> of <see cref="Method"/> available with the service.
         /// </summary>
         [JsonProperty(PropertyName = "methods")]
         public List<Method> Methods { get; private set; }

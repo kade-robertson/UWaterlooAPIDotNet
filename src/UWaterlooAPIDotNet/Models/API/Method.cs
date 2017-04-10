@@ -41,7 +41,7 @@ namespace UWaterlooAPIDotNet.Models.API
         public string ServiceName { get; private set; }
 
         /// <summary>
-        /// A list of required parameters for using the method.
+        /// A <see cref="List{T}"/> of required parameters for using the method.
         /// </summary>
         [JsonProperty(PropertyName = "parameters")]
         public List<string> Parameters { get; private set; }
