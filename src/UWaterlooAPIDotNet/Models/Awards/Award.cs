@@ -31,7 +31,7 @@ namespace UWaterlooAPIDotNet.Models.Awards
         public string Value { get; private set; }
 
         /// <summary>
-        /// The type(s) the award falls under.
+        /// The <see cref="List{T}"/> of type(s) the award falls under.
         /// </summary>
         [JsonProperty(PropertyName = "type")]
         public List<string> Type { get; private set; }
@@ -49,25 +49,25 @@ namespace UWaterlooAPIDotNet.Models.Awards
         public List<string> Citizenship { get; private set; }
 
         /// <summary>
-        /// The academic programs which are eligible for the award.
+        /// The <see cref="List{T}"/> of academic programs which are eligible for the award.
         /// </summary>
         [JsonProperty(PropertyName = "programs")]
         public List<string> Programs { get; private set; }
 
         /// <summary>
-        /// Provides more detailed information about the application process.
+        /// An <see cref="Awards.ApplicationInfo"/> object that provides more detailed information about the application process.
         /// </summary>
         [JsonProperty(PropertyName = "application")]
         public ApplicationInfo ApplicationInfo { get; private set; }
 
         /// <summary>
-        /// Provides more information about the deadlines for applying for the award.
+        ///  An <see cref="Awards.AwardDeadlines"/> object that provides more information about the deadlines for applying for the award.
         /// </summary>
         [JsonProperty(PropertyName = "deadlines")]
         public AwardDeadlines Deadlines { get; private set; }
 
         /// <summary>
-        /// A list of links that provide more information on the award.
+        /// A <see cref="List{T}"/> of links that provide more information on the award.
         /// </summary>
         [JsonProperty(PropertyName = "links")]
         public List<string> Links { get; private set; }
