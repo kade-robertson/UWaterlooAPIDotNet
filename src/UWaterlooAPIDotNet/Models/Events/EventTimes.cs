@@ -9,6 +9,9 @@ namespace UWaterlooAPIDotNet.Models.Events
         [JsonProperty(PropertyName = "start")]
         private string StartTimeString { get; set; }
 
+        /// <summary>
+        /// The start time of the event.
+        /// </summary>
         [JsonIgnore]
         public ZonedDateTime StartTime {
             get {
@@ -21,6 +24,9 @@ namespace UWaterlooAPIDotNet.Models.Events
         [JsonProperty(PropertyName = "end")]
         private string EndTimeString { get; set; }
 
+        /// <summary>
+        /// The end time of the event.
+        /// </summary>
         [JsonIgnore]
         public ZonedDateTime EndTime {
             get {
